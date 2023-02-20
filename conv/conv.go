@@ -8,12 +8,12 @@ func FahrenheitToCelsius(value float64) float64 {
 }
 
 func CelsiusToFahrenheit(value float64) float64 {
-	result := value*(9.0/5.0) + 32;
+	result := value*(9.0/5.0) + 32
 	return math.Round(result)
 }
 
 func FahrenheitToKelvin(value float64) float64 {
-	result := (value-32)*(5.0/9.0) + 273.15;
+	result := (value-32)*(5.0/9.0) + 273.15
 	return math.Round(result*100) / 100
 }
 
