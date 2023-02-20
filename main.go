@@ -77,7 +77,7 @@ func main() {
 
 	// Eksempel på enkel logikk
 	if out == "C" && isFlagPassed("F") {
-		fmt.Println(conv.FarhenheitToCelsius(fahr))
+		fmt.Println(conv.FahrenheitToCelsius(fahr))
 	} else if out == "K" {
 		fmt.Println(conv.FahrenheitToKelvin(fahr))
 	}
@@ -94,7 +94,7 @@ func main() {
 	}
 
 	if out == "F" && isFlagPassed("K") {
-		fmt.Println(conv.KelvinToFarhenheit(Kelv))
+		fmt.Println(conv.KelvinToFahrenheit(Kelv))
 	} else if out == "C" {
 		fmt.Println(conv.KelvinToCelsius(Kelv))
 	}
