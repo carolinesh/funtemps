@@ -77,28 +77,26 @@ func main() {
 
 	// Eksempel på enkel logikk
 	if out == "C" && isFlagPassed("F") {
-		fmt.Println(conv.FarhenheitToCelsius(cels))
+		fmt.Println(conv.FarhenheitToCelsius(fahr))
+	} else if out == "K" {
+		fmt.Println(conv.FahrenheitToKelvin(fahr))
 	}
-	{
-		fmt.Println(conv.CelsiusToFahrenheit(fahr))
-	}
+
 	// Kalle opp funksjonen FahrenheitToCelsius(fahr), som da
 	// skal returnere °c
 
 	// logikk
 
 	if out == "K" && isFlagPassed("C") {
-		fmt.Println(conv.CelsiusToKelvin(Kelv))
-	}
-	{
-		fmt.Println(conv.KelvinToCelsius(cels))
+		fmt.Println(conv.CelsiusToKelvin(cels))
+	} else if out == "F" {
+		fmt.Println(conv.CelsiusToFahrenheit(cels))
 	}
 
 	if out == "F" && isFlagPassed("K") {
-		fmt.Println(conv.KelvinToFarhenheit(fahr))
-	}
-	{
-		fmt.Println(conv.FahrenheitToKelvin(Kelv))
+		fmt.Println(conv.KelvinToFarhenheit(Kelv))
+	} else if out == "C" {
+		fmt.Println(conv.KelvinToCelsius(Kelv))
 	}
 
 }
