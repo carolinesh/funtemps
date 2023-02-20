@@ -3,6 +3,8 @@ package main
 import (
 	"flag"
 	"fmt"
+
+	"github.com/carolinesh/funtemps/conv"
 )
 
 // Definerer flag-variablene i hoved-"scope"
@@ -65,26 +67,38 @@ func main() {
 	*/
 
 	// Her er noen eksempler du kan bruke i den manuelle testingen
-	fmt.Println(fahr, out, funfacts)
+	/** fmt.Println(fahr, out, funfacts)
 
 	fmt.Println("len(flag.Args())", len(flag.Args()))
 	fmt.Println("flag.NFlag()", flag.NFlag())
 
 	fmt.Println(isFlagPassed("out"))
+	*/
 
 	// Eksempel på enkel logikk
 	if out == "C" && isFlagPassed("F") {
-		// Kalle opp funksjonen FahrenheitToCelsius(fahr), som da
-		// skal returnere °C
-		fmt.Println("0°F er -17.78°C")
+		fmt.Println(conv.FarhenheitToCelsius(cels))
 	}
+	{
+		fmt.Println(conv.CelsiusToFahrenheit(fahr))
+	}
+	// Kalle opp funksjonen FahrenheitToCelsius(fahr), som da
+	// skal returnere °c
 
 	// logikk
 
 	if out == "K" && isFlagPassed("C") {
-		// Kalle opp funksjonen FahrenheitToCelsius(fahr), som da
-		// skal returnere °C
-		fmt.Println("0°F er -17.78°C")
+		fmt.Println(conv.CelsiusToKelvin(Kelv))
+	}
+	{
+		fmt.Println(conv.KelvinToCelsius(cels))
+	}
+
+	if out == "F" && isFlagPassed("K") {
+		fmt.Println(conv.KelvinToFarhenheit(fahr))
+	}
+	{
+		fmt.Println(conv.FahrenheitToKelvin(Kelv))
 	}
 
 }
